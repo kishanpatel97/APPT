@@ -1,0 +1,6 @@
+{
+  "mongoURI": "",
+  "mongoDB_test_URI": "mongodb://localhost/appt_db",
+  "jwtSecret": "jwtSecretToken",
+  "jwtExpiration": 360000
+}
