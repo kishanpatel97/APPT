@@ -1,4 +1,4 @@
-const AppointmentController = require("../controllers/apppointment.controller");
+const AppointmentController = require("../controllers/appt.controller");
 
 const { authenticate } = require("../config/jwt.config");
 
