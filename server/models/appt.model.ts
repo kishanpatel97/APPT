@@ -29,7 +29,7 @@ const appointmentSchema: Schema = new Schema({
         type: String,
         required: false
     },
-});
+}, { timestamps: true });
 
 const Appointment: Model<IAppointment> = model("Appointment", appointmentSchema);
 
