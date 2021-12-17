@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+  .btn {
+    @apply bg-steelBlue
+  }
+  .navbar {
+    @apply bg-darkBlue
+  }
+}
 
 body {
   margin: 0;
