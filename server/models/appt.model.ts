@@ -1,12 +1,5 @@
 import { Document, Model, model, Schema } from "mongoose";
-
-export interface IAppointment extends Document {
-    name: string;
-    specialty: string;
-    time: string;
-    location: string;
-    notes: string;
-}
+import { IAppointment } from "../interfaces/appointment.interface";
 
 const appointmentSchema: Schema = new Schema({
     name: {
