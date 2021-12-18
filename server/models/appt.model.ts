@@ -19,8 +19,7 @@ const appointmentSchema: Schema = new Schema({
         required: [true, "Location is required"],
     },
     notes: {
-        type: String,
-        required: [true, "Notes are required"],
+        type: String
     },
 }, { timestamps: true });
 
