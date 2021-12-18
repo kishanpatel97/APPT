@@ -1,0 +1,3 @@
+{
+  "mongoDB_test_URI": "mongodb://localhost/appt_test_db"
+}

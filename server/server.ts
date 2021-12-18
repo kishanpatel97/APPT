@@ -12,3 +12,5 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 routes(app)
 app.listen(port, () => console.log(`Listening on port: ${port}`));
+const server = app
+export default server
