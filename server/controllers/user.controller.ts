@@ -37,12 +37,12 @@ const register = async (req: Request, res: Response): Promise<IUser> => {
 const login = async (req: Request, res: Response): Promise<IUser> => {
   const user = await User.findOne({ email: req.body.email });
   if(user === null) {
-    return res.status(400).send({ message: "user does not exist."});
+    return res.status(400).json({ message: "user does not exist."});
   }
 
   const isPasswordCorrect = await bcrypt.compare(req.body.password, user.password);
   if(!isPasswordCorrect) {
-    return res.status(403).send({ message: "Password or email is incorrect."});
+    return res.status(403).json({ message: "Password or email is incorrect."});
   }
   
   const name = `${user.firstName} ${user.lastName}`
