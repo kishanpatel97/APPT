@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken"
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from "express";
+import dotenv from "dotenv";
+dotenv.config()
 
 export default {
     authenticate(req : Request, res : Response, next : NextFunction){
