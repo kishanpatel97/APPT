@@ -1,9 +1,6 @@
-import { Document, Model, model, Schema } from "mongoose";
-import bcrypt from 'bcrypt'
-export interface IUser extends Document {
-    email: string;
-    password: string;
-}
+import { Model, model, Schema } from "mongoose";
+import bcrypt from "bcrypt"
+import { IUser } from "../interfaces/user.interface";
 
 const UserSchema: Schema = new Schema({
     email: {

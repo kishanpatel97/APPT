@@ -1,4 +1,4 @@
-import { Document, Model, model, Schema } from "mongoose";
+import { Model, model, Schema } from "mongoose";
 import { IAppointment } from "../interfaces/appointment.interface";
 
 const appointmentSchema: Schema = new Schema({
