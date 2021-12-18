@@ -1,7 +1,7 @@
-const jwt = require("jsonwebtoken");
+import jwt from "jsonwebtoken"
 import { Request, Response, NextFunction } from 'express';
 
-module.exports = {
+export default {
     authenticate(req : Request, res : Response, next : NextFunction){
         jwt.verify(
             req.cookies.usertoken,
