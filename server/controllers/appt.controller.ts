@@ -30,7 +30,7 @@ const findOneAppointment = async (req: Request, res: Response): Promise<IAppoint
 }
 const updateAppointment = async (req: Request, res: Response): Promise<IAppointment> => {
   try {
-    const appointment = await Appointment.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    const appointment = await Appointment.findByIdAndUpdate({ _id: req.params.id }, req.body, { runValidators: true, new: true })
     return res.status(200).json(appointment)
   } catch(e) {
     return res.status(500).json(e.message)
@@ -45,7 +45,7 @@ const deleteAppointment = async (req: Request, res: Response): Promise<{}> => {
   }
 }
 
-export { 
+export default { 
   findAllAppointments,
   createNewAppointment,
   findOneAppointment,

@@ -1,5 +1,5 @@
 import { Express } from "express";
-import * as AppointmentController from "../controllers/appt.controller"
+import AppointmentController from "../controllers/appt.controller"
 import authenticate from '../config/jwt.config'
 
 export default (app: Express) => {
