@@ -4,23 +4,23 @@ import { IAppointment } from "../interfaces/appointment.interface";
 const appointmentSchema: Schema = new Schema({
     name: {
         type: String,
-        required: true,
+        required: [true, "Name is required"],
     },
     specialty: {
         type: String,
-        required: true,
+        required: [true, "Speciality is required"],
     },
     time: {
         type: String,
-        required: true
+        required: [true, "Time is required"],
     },
     location: {
         type: String,
-        required: true
+        required: [true, "Location is required"],
     },
     notes: {
         type: String,
-        required: false
+        required: [true, "Notes are required"],
     },
 }, { timestamps: true });
 
