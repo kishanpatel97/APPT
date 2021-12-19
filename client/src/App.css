@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  color: gainsboro
+}
