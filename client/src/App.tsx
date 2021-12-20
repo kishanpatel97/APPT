@@ -3,6 +3,7 @@ import Redirect from './components/redirect';
 import Login from './components/login';
 import Register from './components/register';
 import NavBar from './components/navbar';
+import Modal from './components/modal';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path='/' element={<Redirect />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
+                <Route path='/dashboard' element={<Modal />} />
             </Routes>
         </BrowserRouter>
     );
