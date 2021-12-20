@@ -4,7 +4,7 @@ import { IAppointment } from '../../../shared/interfaces/appointment.interface';
 
 const Modal: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
-    const [error, setError] = useState('');
+    const [errors, setErrors] = useState({});
     const nameField = useRef<HTMLInputElement>(null);
     const specialtyField = useRef<HTMLInputElement>(null);
     const timeField = useRef<HTMLInputElement>(null);
@@ -40,10 +40,10 @@ const Modal: React.FC = () => {
                     location: '',
                     notes: '',
                 });
-                setError('');
+                setErrors('');
             })
             .catch((err) => {
-                setError(err.response.data.message);
+                setErrors(err.response.data.message);
             });
     };
 
@@ -129,7 +129,7 @@ const Modal: React.FC = () => {
                                                 type='text'
                                             />
                                         </div>
-                                        {error ? <p className='m-2 alertBad'>{error}</p> : null}
+                                        {errors ? <p className='m-2 alertBad'>{errors}</p> : null}
                                     </form>
                                 </div>
                                 {/*footer*/}
