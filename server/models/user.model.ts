@@ -3,10 +3,17 @@ import bcrypt from "bcrypt"
 import { IUser } from "../interfaces/user.interface";
 
 const UserSchema: Schema = new Schema({
+    firstName: {
+        type: String,
+        required: [true, "First name is required"]
+    },
+    lastName: {
+        type: String,
+        required: [true, "Last name is required"]
+    },
     email: {
         type: String,
-        required: [true, "Email address is required"],
-        unique: true
+        required: [true, "Email address is required"]
     },
     password: {
         type: String,
@@ -22,21 +29,15 @@ UserSchema.virtual("confirmPassword")
     .set((value : string)=> self._confirmPassword = value)
 
 UserSchema.pre("validate", function(next){
-    console.log("in validate");
-
     if(this.password !== this.confirmPassword){
         this.invalidate("confirmPassword", "Passwords must match");
-        console.log("didnt match");
     }
-    console.log(this.password, this.confirmPassword);
     next();
 })
 
 UserSchema.pre("save", function(next){
-    console.log("in pre save");
         bcrypt.hash(this.password, 10)
-            .then((hashedPassword : string)=>{ 
-                console.log("in hash");
+            .then((hashedPassword : string)=>{
                 this.password = hashedPassword;
             next();
             })

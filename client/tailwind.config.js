@@ -7,7 +7,9 @@ module.exports = {
         darkBlue: "#3165B5",
         steelBlue: "#828FBB",
         whippedCream: "#F4F9FF",
-        mint: "#E6F4F1"
+        mint: "#E6F4F1",
+        forestTeal: "#379683",
+        mediumGrey: "#bec7c4"
       }
     },
   },
