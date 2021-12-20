@@ -3,90 +3,88 @@
 @tailwind utilities;
 
 @layer components {
-  .btn {
-    @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90
-  }
-  .navbar {
-    @apply bg-darkBlue flex items-center justify-between flex-wrap p-6
-  }
-  .navLink{
-    @apply inline-block text-sm px-4 py-2 leading-none border rounded text-white hover:border-white border-transparent mt-4 lg:mt-0
-  }
-  .loginReg{
-    @apply bg-mediumGrey shadow-md rounded-2xl mx-auto mt-20 w-1/4 flex-col text-center pt-8 pb-8
-  }
-  .loginRegInput{
-    @apply w-4/6 p-2 rounded-md border-2
-  }
-  .loginRegBtn{
-    @apply block mx-auto mt-4 p-2 rounded-lg w-2/6 text-lg
-  }
+    .btn {
+        @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90;
+    }
+    .navbar {
+        @apply bg-darkBlue flex items-center justify-between flex-wrap p-6;
+    }
+    .navLink {
+        @apply inline-block text-sm px-4 py-2 leading-none border rounded text-white hover:border-white border-transparent mt-4 lg:mt-0;
+    }
+    .loginReg {
+        @apply bg-mediumGrey shadow-md rounded-2xl mx-auto mt-20 w-1/4 flex-col text-center pt-8 pb-8;
+    }
+    .loginRegInput {
+        @apply w-4/6 p-2 rounded-md border-2;
+    }
+    .loginRegBtn {
+        @apply block mx-auto mt-4 p-2 rounded-lg w-2/6 text-lg;
+    }
 }
 
 body {
-  background: white;
-  margin: 0;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: white;
+    margin: 0;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.logoText{
-  font-family: 'Copperplate';
+.logoText {
+    font-family: 'Copperplate';
 }
 /* .font{
   font-family: 'Raleway', sans-serif;
 } */
 
-.showPassBtn{
-  display: inline;
-  position: absolute;
-  right: 20%;
-  bottom: 9%;
-  cursor: pointer;
+.showPassBtn {
+    display: inline;
+    position: absolute;
+    right: 20%;
+    bottom: 9%;
+    cursor: pointer;
 }
 
-.showPassBtn:hover{
-  filter: invert(64%) sepia(3%) saturate(2456%) hue-rotate(168deg) brightness(95%) contrast(81%);
+.showPassBtn:hover {
+    filter: invert(64%) sepia(3%) saturate(2456%) hue-rotate(168deg) brightness(95%) contrast(81%);
 }
 
-.capsCheck{
-  display: none;
-  position: absolute;
-  right: 26%;
-  bottom: 9%;
+.capsCheck {
+    display: none;
+    position: absolute;
+    right: 26%;
+    bottom: 9%;
 }
 
-.alertBad{
-  background-color: #e66b6bbd;
-  border: #c04a4abd solid 2px;
-  color: white;
-  font-size: .9rem;
-  font-weight: 600;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 5px;
-  padding: 5px 20px;
-  min-width: 66%;
+.alertBad {
+    background-color: #e66b6bbd;
+    border: #c04a4abd solid 2px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 5px 20px;
+    min-width: 66%;
 }
 
-.alertGood{
-  background-color: #75e66bbd;
-  border: #5cc04abd solid 2px;
-  color: black;
-  font-size: .9rem;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 5px;
-  padding: 5px 10px;
-  min-width: 66%;
+.alertGood {
+    background-color: #75e66bbd;
+    border: #5cc04abd solid 2px;
+    color: black;
+    font-size: 0.9rem;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-width: 66%;
 }
