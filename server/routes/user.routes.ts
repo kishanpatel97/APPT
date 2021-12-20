@@ -1,5 +1,5 @@
 import { Express } from "express";
-import * as UserController from "../controllers/user.controller"
+const UserController = require(`../controllers/user.controller`);
 
 export default (app : Express) => {
     app.post("/api/users/register", UserController.register);
