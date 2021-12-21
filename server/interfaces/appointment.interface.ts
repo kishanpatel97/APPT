@@ -1,6 +1,4 @@
-import { Document } from "mongoose";
-
-export interface IAppointment extends Document {
+export interface IAppointment {
   name: string;
   specialty: string;
   time: string;
