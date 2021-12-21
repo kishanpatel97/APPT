@@ -73,11 +73,11 @@ code {
     min-width: 66%;
 }
 
-.alertBadLeft{
+.alertBadLeft {
     background-color: #e66b6bbd;
     border: #c04a4abd solid 2px;
     color: white;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 600;
     width: fit-content;
     margin-right: auto;

@@ -19,10 +19,6 @@ const AppointmentList: React.FC = (props) => {
     }
   }
 
-  useEffect(() => {
-    fetchAppointments()
-  }, [])
-
   const deleteFromDom = async (index : number, apptId : string) =>{
     try{
       const response = await axios.delete(`http://localhost:8000/api/appointment/${apptId}`,{withCredentials:true})
