@@ -9,7 +9,7 @@ const findAllAppointments = async (req: Request, res: Response): Promise<IAppoin
     const appointments = await Appointment.find()
     return res.status(200).json(appointments)
   } catch(e: unknown) {
-    return res.status(500).json(e)
+    return res.status(400).json(e)
   }
 }
 
@@ -18,7 +18,7 @@ const createNewAppointment = async (req: Request, res: Response): Promise<IAppoi
     const appointment = await Appointment.create(req.body)
     return res.status(201).json(appointment)
   } catch(e: unknown) {
-    return res.status(500).json(e)
+    return res.status(400).json(e)
   }
 }
 
@@ -27,7 +27,7 @@ const findOneAppointment = async (req: Request, res: Response): Promise<IAppoint
     const appointment = await Appointment.findOne({ _id: req.params.id })
     return res.status(200).json(appointment)
   } catch(e: unknown) {
-    return res.status(500).json(e)
+    return res.status(400).json(e)
   }
 }
 const updateAppointment = async (req: Request, res: Response): Promise<IAppointment> => {
@@ -35,7 +35,7 @@ const updateAppointment = async (req: Request, res: Response): Promise<IAppointm
     const appointment = await Appointment.findByIdAndUpdate({ _id: req.params.id }, req.body, { runValidators: true, new: true })
     return res.status(200).json(appointment)
   } catch(e: unknown) {
-    return res.status(500).json(e)
+    return res.status(400).json(e)
   }
 }
 const deleteAppointment = async (req: Request, res: Response): Promise<{}> => {
@@ -43,11 +43,11 @@ const deleteAppointment = async (req: Request, res: Response): Promise<{}> => {
     const appointment = await Appointment.deleteOne({ _id: req.params.id })
     return res.status(200).json(appointment)
   } catch(e: unknown) {
-    return res.status(500).json(e)
+    return res.status(400).json(e)
   }
 }
 
-export default { 
+export default {
   findAllAppointments,
   createNewAppointment,
   findOneAppointment,

@@ -6,3 +6,12 @@ export interface IAppointment {
   location: string;
   notes?: string;
 }
+
+export interface IAppointmentPost {
+  name: string;
+  specialty: string;
+  time: string;
+  location: string;
+  notes: string;
+}
+

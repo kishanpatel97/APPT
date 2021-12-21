@@ -11,8 +11,7 @@ const Card: React.FC<IProps> = (props) => {
   const { _id, name, specialty, time, location } = props;
 
   return (
-    <div className="flex justify-center">
-      <div className="hover:scale-105 rounded-3xl w-3/5 bg-gray-200 mt-5 px-4 py-3 shadow-lg transition transform duration-700 cursor-pointer">
+      <div className="hover:scale-105 rounded-3xl w-full bg-gray-200 mt-5 px-4 py-3 shadow-lg transition transform duration-700 cursor-pointer">
         <div className="flex flex-col">
           <div className="flex justify-between items-center w-50">
             <div className="text-lg font-semibold text-bookmark-blue flex space-x-1 items-center mb-2">
@@ -38,7 +37,6 @@ const Card: React.FC<IProps> = (props) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

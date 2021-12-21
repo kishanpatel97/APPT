@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90;
+        @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90 p-2 rounded-lg;
     }
     .navbar {
         @apply bg-darkBlue flex items-center justify-between flex-wrap p-6;
@@ -19,7 +19,7 @@
         @apply w-4/6 p-2 rounded-md border-2;
     }
     .loginRegBtn {
-        @apply block mx-auto mt-4 p-2 rounded-lg w-2/6 text-lg;
+        @apply block mx-auto mt-4 w-2/6 text-lg;
     }
 }
 
@@ -68,6 +68,20 @@ code {
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 5px;
+    padding: 5px 20px;
+    min-width: 66%;
+}
+
+.alertBadLeft{
+    background-color: #e66b6bbd;
+    border: #c04a4abd solid 2px;
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: 0;
     border-radius: 5px;
     padding: 5px 20px;
     min-width: 66%;

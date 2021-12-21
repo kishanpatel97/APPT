@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken"
 import { Request, Response, NextFunction } from 'express';
 
-export default {
+export default function
     authenticate(req : Request, res : Response, next : NextFunction){
         jwt.verify(
             req.cookies.usertoken,
@@ -22,4 +22,3 @@ export default {
             }
         );
     }
-}
