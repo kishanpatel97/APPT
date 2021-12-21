@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90;
+        @apply bg-red-600 shadow-md font-medium text-white hover:opacity-90 p-2 rounded-lg;
     }
     .navbar {
         @apply bg-darkBlue flex items-center justify-between flex-wrap p-6;
@@ -19,7 +19,7 @@
         @apply w-4/6 p-2 rounded-md border-2;
     }
     .loginRegBtn {
-        @apply block mx-auto mt-4 p-2 rounded-lg w-2/6 text-lg;
+        @apply block mx-auto mt-4 w-2/6 text-lg;
     }
 }
 
@@ -73,6 +73,20 @@ code {
     min-width: 66%;
 }
 
+.alertBadLeft {
+    background-color: #e66b6bbd;
+    border: #c04a4abd solid 2px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    min-width: 66%;
+}
+
 .alertGood {
     background-color: #75e66bbd;
     border: #5cc04abd solid 2px;
@@ -85,3 +99,42 @@ code {
     padding: 5px 10px;
     min-width: 66%;
 }
+
+.containerWidth {
+    min-width: 57%;
+}
+
+/*testing stuff start, please leaave*/
+.card {
+    /* perspective: 1000px; */
+}
+
+.card-inner {
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    /* text-align: center; */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.card:active .card-inner {
+    transform: rotateX(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    /* background-color: #2980b9;
+    color: white; */
+    transform: rotateX(180deg);
+}
+/*testing stuff end, please leaave*/
