@@ -6,12 +6,11 @@ export default function authenticate(req: Request, res: Response, next: NextFunc
         req.cookies.usertoken,
         process.env.JWT_SECRET,
 
-        (err, payload)=>{
-            if(err){
+        (err, payload) => {
+            if (err) {
                 //not a valid token or cookie doesn't exist
                 res.status(401).json({ verified: false });
-            }
-            else{
+            } else {
                 next();
             }
         }
