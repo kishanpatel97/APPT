@@ -195,6 +195,7 @@ const Modal: React.FC = () => {
                                         }
                                         placeholder='Time'
                                         type='datetime-local'
+                                        max='2999-12-31T23:59'
                                     />
                                     {errors.time ? (
                                         <p className='alertBadLeft mb-2'>{errors.time.message}</p>
