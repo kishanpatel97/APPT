@@ -4,6 +4,7 @@ import Login from './components/login';
 import Register from './components/register';
 import NavBar from './components/navbar';
 import Modal from './components/modal';
+import AppointmentList from './components/appointmentList';
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Route path='/' element={<Redirect />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
-                <Route path='/dashboard' element={<Modal />} />
+                <Route path='/dashboard' element={<AppointmentList />} />
             </Routes>
         </BrowserRouter>
     );
