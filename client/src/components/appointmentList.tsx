@@ -8,7 +8,7 @@ const AppointmentList: React.FC = (props) => {
     const [appointments, setAppointments] = useState<IAppointment[]>([]);
     const [error, setError] = useState('');
     const [loaded, setLoaded] = useState(false);
-
+    
     const fetchAppointments = async () => {
         try {
             const response = await axios.get<IAppointment[]>(
@@ -33,6 +33,10 @@ const AppointmentList: React.FC = (props) => {
             setError(err);
         }
     };
+
+    useEffect(() => {
+        fetchAppointments()
+    }, [])
 
     return (
         <div className='flex flex-col items-center w-3/5 mx-auto mt-10'>
