@@ -13,7 +13,6 @@ const AppointmentList: React.FC = (props) => {
     try {
       const response =  await axios.get<IAppointment[]>('http://localhost:8000/api/appointments',{withCredentials:true})
       setAppointments(prev => [...prev, ...response.data])
-      console.log(response.data)
       setLoaded(prev => !prev)
     } catch(e: any) {
       setError(e)

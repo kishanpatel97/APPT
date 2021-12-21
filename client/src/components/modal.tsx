@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { IAppointmentPost } from '../../../shared/interfaces/appointment.interface';
 
 const Modal: React.FC = () => {
-	const navigate = useNavigate();
+		const navigate = useNavigate();
     const nameField = useRef<HTMLInputElement>(null);
     const specialtyField = useRef<HTMLInputElement>(null);
     const timeField = useRef<HTMLInputElement>(null);
@@ -44,14 +44,14 @@ const Modal: React.FC = () => {
                 withCredentials: true,
             })
             .then((res) => {
-                setAppt({
-                    name: '',
-                    specialty: '',
-                    time: '',
-                    location: '',
-                    notes: '',
-                });
-                setErrors({
+							setAppt({
+								name: '',
+								specialty: '',
+								time: '',
+								location: '',
+								notes: '',
+							});
+							setErrors({
 								name: '',
 								specialty: '',
 								time: '',
