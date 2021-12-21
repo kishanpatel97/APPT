@@ -16,6 +16,7 @@ function App() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/dashboard' element={<AppointmentList />} />
                 <Route path='/add_appointment' element={<ModalAddView />} />
+                <Route path='/edit_appointment/:id' element={<ModalAddView />} />
             </Routes>
         </BrowserRouter>
     );

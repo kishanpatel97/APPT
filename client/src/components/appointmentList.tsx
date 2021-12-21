@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from './card';
@@ -14,8 +14,8 @@ const AppointmentList: React.FC = (props) => {
       const response =  await axios.get<IAppointment[]>('http://localhost:8000/api/appointments',{withCredentials:true})
       setAppointments(prev => [...prev, ...response.data])
       setLoaded(prev => !prev)
-    } catch(e: any) {
-      setError(e)
+    } catch(err: any) {
+      setError(err)
     }
   }
 
@@ -23,13 +23,25 @@ const AppointmentList: React.FC = (props) => {
     fetchAppointments()
   }, [])
 
+  const deleteFromDom = async (index : number, apptId : string) =>{
+    try{
+      const response = await axios.delete(`http://localhost:8000/api/appointment/${apptId}`,{withCredentials:true})
+      const newAppointments = appointments.filter((appt,i) => (
+          i !== index
+      ))
+      setAppointments(newAppointments)
+    } catch(err :any){
+      setError(err)
+    }
+  }
+
   return (
     <div className="flex flex-col items-center w-3/5 mx-auto mt-10">
       <Link to='/add_appointment' className='btn block w-fit self-start mt-3'>Add Appointment</Link>
       {
         loaded?
           appointments.length > 0?
-          appointments.map(({_id, name, specialty, time, location}, index) => <Card key={index} _id={_id} name={name} specialty={specialty} time={time} location={location} notes=""/>)
+          appointments.map(({_id, name, specialty, time, location, notes}, index) => <Card key={index} index={index} _id={_id} name={name} specialty={specialty} time={time} location={location} notes={notes||""} deleteFunc={deleteFromDom}/>)
           :
           <div className='m-auto text-center mt-20'>
             <h2 className='text-3xl font-bold'>There are no appointments documented.</h2>
