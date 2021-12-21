@@ -5,17 +5,10 @@ import Modal from './modal'
 import { IAppointment } from '../../../server/interfaces/appointment.interface';
 interface IProps extends IAppointment {
   _id?: string;
-  setShowModal?: React.Dispatch<React.SetStateAction<boolean>>
-  setValue?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Card: React.FC<IProps> = (props) => {
-  const { setShowModal, setValue, _id, name, specialty, time, location } = props;
-  const [modalDetails, setModalDetails] = useState({})
-
-  const showModal = () => {
-    if(setShowModal) setShowModal(prev => !prev);
-  }
+  const { _id, name, specialty, time, location } = props;
 
   return (
     <div className="flex justify-center">
@@ -39,7 +32,7 @@ const Card: React.FC<IProps> = (props) => {
           </div>
           <div>
             <div className="flex justify-end">
-              <button className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer" onClick={() => showModal()}>Edit</button>
+              <button className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer">Edit</button>
               <button className="mr-2 my-1 uppercase tracking-wider px-2 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer">Delete</button>
             </div>
           </div>

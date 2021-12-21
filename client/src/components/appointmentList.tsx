@@ -7,7 +7,7 @@ import { IAppointment } from '../../../shared/interfaces/appointment.interface';
 
 const AppointmentList: React.FC = (props) => {
   const [appointments, setAppointments] = useState<IAppointment[]>([])
-  const [error, setError] = useState({})
+  const [error, setError] = useState("")
   const [loaded, setLoaded] = useState(false)
   
   const fetchAppointments = async() => {
