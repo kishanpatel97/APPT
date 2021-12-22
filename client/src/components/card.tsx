@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import { IAppointment } from '../../../server/interfaces/appointment.interface';
+import StarRating from "./starrating";
 
 interface IProps extends IAppointment {
     index: number;
@@ -49,16 +50,17 @@ const Card: React.FC<IProps> = (props) => {
                 <div className='text-sm text-gray-500 flex items-center'>
                     <span>{location}</span>
                 </div>
+                <StarRating />
                 <div className='flex justify-end'>
                     <button
                         onClick={() => navigate(`/edit_appointment/${_id}`)}
-                        className='mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer'
+                        className='mr-2 my-0 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer'
                     >
                         Edit
                     </button>
                     <button
                         onClick={() => deleteFunc(index, _id)}
-                        className='mr-2 my-1 uppercase tracking-wider px-2 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer'
+                        className='mr-2 my-0 uppercase tracking-wider px-2 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer'
                     >
                         Delete
                     </button>
