@@ -138,3 +138,10 @@ code {
     transform: rotateX(180deg);
 }
 /*testing stuff end, please leaave*/
+
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
